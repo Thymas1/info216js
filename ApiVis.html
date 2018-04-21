@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://openlayers.org/en/v4.6.4/build/ol.js" type="text/javascript"></script>
+<link rel="stylesheet" href="design.css" type="text/css">
+  <title>API</title>
+
+
+
+</head>
+
+<body>
+<a href="søk.html"> Søk i datasett:</a>
+<div id="map" class="map"></div>
+  <div id="root"></div>
+
+  <script src="visLadestasjoner.js"></script>
+
+  <script type="text/javascript">
+      let map = new ol.Map({
+          target: 'map',
+          layers: [
+              new ol.layer.Tile({
+                  source: new ol.source.OSM()
+              })
+          ],
+          view: new ol.View({
+              center: ol.proj.fromLonLat([5.32415, 60.39299]),
+              zoom: 8
+          })
+      });
+
+
+  </script>
+</body>
+
+</html>

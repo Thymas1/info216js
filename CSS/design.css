@@ -42,8 +42,8 @@ ul {
 
 }
 #map{
-    height: 50%;
-    width: 50%;
+    height: 50rem;
+    width: 50rem;
     z-index: 1;
     float: right;
     position: static;

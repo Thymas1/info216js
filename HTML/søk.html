@@ -1,20 +1,20 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Søk i datasett</title>
     <link rel="stylesheet" href="../CSS/teststil.css" type="text/css">
-    <script src="../Script/search.js"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript" src="../sgvizler/sgvizler.js"></script>
-    <script type="text/javascript"> $(document).ready(function () {sgvizler.formDraw();});
-    </script>
+    <script type="text/javascript" src="http://mgskjaeveland.github.io/sgvizler/v/0.6/sgvizler.js"></script>
+
 </head>
 <body>
 <a href="ApiVis.html">Tilbake</a>
-
-
+<div id="queryForm"></div>
+<script type="text/javascript">
+    $(document).ready(function () { sgvizler.formDraw("queryForm"); });
+</script>
 
 </body>
 </html>

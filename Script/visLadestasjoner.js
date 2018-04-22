@@ -17,7 +17,7 @@ app.appendChild(container);
 
 
 var xhr = new XMLHttpRequest();
-xhr.open('GET', 'https://api.openchargemap.io/v2/poi/', true);
+xhr.open('GET','https://api.openchargemap.io/v2/poi/?output=json&countrycode=NO&maxresults=*', true);
 xhr.onload = function (e) {
     xhr.data = JSON.parse(this.response);
     if (xhr.readyState === 4) {

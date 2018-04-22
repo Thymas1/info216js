@@ -42,12 +42,13 @@ ul {
 
 }
 #map{
-    height: 50rem;
+    height: 30rem;
     width: 50rem;
     z-index: 1;
     float: right;
     position: static;
     margin-right: 50px;
+    margin-top: 100px;
     text-align: center;
 
 

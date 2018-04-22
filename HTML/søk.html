@@ -1,19 +1,20 @@
 !DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Søk i datasett</title>
     <link rel="stylesheet" href="../CSS/teststil.css" type="text/css">
     <script src="../Script/search.js"></script>
-    <script src="../api"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="../sgvizler/sgvizler.js"></script>
+    <script type="text/javascript"> $(document).ready(function () {sgvizler.formDraw();});
+    </script>
 </head>
 <body>
-<div id="sok">
-		<h4> Søk </h4>
-			<input id="sokValue" value="" type="text" name="search" placeholder="Search..">
-			<button id="sokBtn">Søk</button>
+<a href="ApiVis.html">Tilbake</a>
 
-		</div>
+
 
 </body>
 </html>

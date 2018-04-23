@@ -25,7 +25,7 @@ function initMap() {
             });
             // Creating an InfoWindow object
             var infowindow = new google.maps.InfoWindow({
-                content: '<a href="vislad.html"> Addresse:</a>' + ' ' + poi.AddressInfo.AddressLine1 + '<br>' +
+                content: '<a href="vislad.html?id=" + poi.ID> Addresse:</a>' + ' ' + poi.AddressInfo.AddressLine1 + '<br>' +
                 'Pris: ' + poi.UsageCost + '<br>'
             });
             google.maps.event.addListener(marker, 'click', function () {

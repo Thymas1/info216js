@@ -1,15 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Gugi');
 
-div{
-    width: 20%;
-    height: 50%;
+body{
+    display: flex;
+    font-family: 'Gugi', cursive;
 }
 
+#wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background: turquoise;
+}
+
+#header{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 7.5%;
+    width: 100%;
+    background: #D47810;
+    text-align: center;
+
+}
+
+#header h1{
+    display: flex;
+    color: ivory;
+    margin-bottom: 10%;
+}
+
+
+
 .card{
+
+    width: 30%;
+    height: 1%;
     border-bottom: solid black;
     border-right: solid black;
     border-left: solid black;
     margin-bottom: 10px;
     margin-left: 200px;
+    background: red;
 }
 .card h1 {
     text-align: center;
@@ -19,14 +54,32 @@ div{
     padding: 0;
 }
 #root h1 {
-    float: top;
+    display: flex;
+
 
 }
+
+#dapper {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+}
+
+#rootstuff{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 #root{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
     text-align: center;
+    background: blue;
 }
 .container{
+    background: green;
     width: 100%;
     text-align: center;
     margin-top: 100px;
@@ -35,20 +88,21 @@ div{
 li{
     list-style-type: none;
     margin-bottom: 2px;
+    background: purple;
 
 }
 ul {
     text-align: left;
+    background: pink;
 
 }
 #map{
+    display: flex;
+    background: ivory;
     height: 40rem;
     width: 50rem;
     z-index: 1;
     float: right;
-    position: static;
-    margin-right: 50px;
-    margin-top: 100px;
     text-align: center;
 
 

@@ -30,8 +30,16 @@ function initMap() {
                 });
                 // Creating an InfoWindow object
                 var infowindow = new google.maps.InfoWindow({
-                    content: 'Addresse:' + ' ' + poi.AddressInfo.AddressLine1
+                    content: 'Addresse:' + ' ' + poi.AddressInfo.AddressLine1 + '<br>' +
+                        'Pris: ' + poi.UsageCost +'<br>'
+
+
+
+
+
+
                 });
+
                 google.maps.event.addListener(marker, 'click', function() {
                     infowindow.open(map, marker);
                 });

@@ -2,7 +2,7 @@ function initMap() {
     var xhr = new XMLHttpRequest();
     var url = 'https://api.openchargemap.io/v2/poi/?output=json&countrycode=NO&maxresults=100';
     xhr.open('GET', url, true);
-    xhr.onload = function() {
+    xhr.onload = function () {
         xhr.Data = JSON.parse(this.response);
 
         var map = new google.maps.Map(document.getElementById('map'), {
@@ -12,38 +12,26 @@ function initMap() {
             },
             zoom: 6
         });
-
         if (this.status == 200) {
             xhr.Data.forEach(poi => {
 
 
                 var latLng = new google.maps.LatLng(poi.AddressInfo.Latitude, poi.AddressInfo.Longitude);
+            //Creating a marker and putting it on the map
+            var marker = new google.maps.Marker({
+                position: latLng,
+                map: map,
 
-
-                //console.log(poi);
-
-                //Creating a marker and putting it on the map
-                var marker = new google.maps.Marker({
-                    position: latLng,
-                    map: map,
-
-                });
-                // Creating an InfoWindow object
-                var infowindow = new google.maps.InfoWindow({
-                    content: 'Addresse:' + ' ' +'<a href="vislad.html"> poi.AddressInfo.AddressLine1</a>'
-                    content: 'Addresse:' + ' ' + poi.AddressInfo.AddressLine1 + '<br>' +
-                        'Pris: ' + poi.UsageCost +'<br>'
-
-
-
-
-
-
-                });
-                google.maps.event.addListener(marker, 'click', function() {
-                    infowindow.open(map, marker);
-                });
-            })
+            });
+            // Creating an InfoWindow object
+            var infowindow = new google.maps.InfoWindow({
+                content: 'Addresse:' + ' ' + '<a href="vislad.html"> poi.AddressInfo.AddressLine1</a>' + '<br>' +
+                'Pris: ' + poi.UsageCost + '<br>'
+            });
+            google.maps.event.addListener(marker, 'click', function () {
+                infowindow.open(map, marker);
+            });
+        })
         }
     }
     xhr.send();

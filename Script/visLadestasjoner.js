@@ -15,7 +15,6 @@ app.appendChild(overskrift);
 map.appendChild(kartoverskrift);
 app.appendChild(container);
 
-
 var xhr = new XMLHttpRequest();
 xhr.open('GET','https://api.openchargemap.io/v2/poi/?output=json&countrycode=NO&maxresults=200000', true);
 xhr.onload = function (e) {
@@ -73,3 +72,5 @@ xhr.onerror = function (e) {
     console.error("funker.ikke");
 };
 xhr.send(null);
+
+

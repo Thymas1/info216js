@@ -30,7 +30,7 @@ function initMap() {
                 });
                 // Creating an InfoWindow object
                 var infowindow = new google.maps.InfoWindow({
-                    content: 'Hello world'
+                    content: ' <p style="color:blue;"> test hest prest </p>'
                 });
                 google.maps.event.addListener(marker, 'click', function() {
                     infowindow.open(map, marker);

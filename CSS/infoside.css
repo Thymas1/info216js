@@ -1,0 +1,27 @@
+#header h1{
+    display: flex;
+    color: ivory;
+    margin-bottom: 10%;
+}
+
+
+
+.card{
+
+    width: 30%;
+    height: 1%;
+    border-bottom: solid black;
+    border-right: solid black;
+    border-left: solid black;
+    margin-bottom: 10px;
+    margin-left: 200px;
+
+}
+
+.card h1 {
+    text-align: center;
+    border-top: dashed  black;
+    border-bottom: dashed black;
+    margin: 0;
+    padding: 0;
+}

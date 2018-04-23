@@ -30,6 +30,7 @@ function initMap() {
                 });
                 // Creating an InfoWindow object
                 var infowindow = new google.maps.InfoWindow({
+                    content: 'Addresse:' + ' ' +'<a href="vislad.html"> poi.AddressInfo.AddressLine1</a>'
                     content: 'Addresse:' + ' ' + poi.AddressInfo.AddressLine1 + '<br>' +
                         'Pris: ' + poi.UsageCost +'<br>'
 
@@ -39,7 +40,6 @@ function initMap() {
 
 
                 });
-
                 google.maps.event.addListener(marker, 'click', function() {
                     infowindow.open(map, marker);
                 });

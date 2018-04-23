@@ -7,12 +7,7 @@ var overskrift = document.createElement("h1");
 overskrift.setAttribute('id', 'overskift');
 overskrift.textContent = "Data fra Api:";
 
-var kartoverskrift = document.createElement("h1");
-kartoverskrift.setAttribute('id', 'kartoverskrift');
-kartoverskrift.textContent = "Kart med punkt:";
-
 app.appendChild(overskrift);
-map.appendChild(kartoverskrift);
 app.appendChild(container);
 
 var xhr = new XMLHttpRequest();

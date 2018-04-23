@@ -1,6 +1,6 @@
 function initMap() {
     var xhr = new XMLHttpRequest();
-    var url = 'https://api.openchargemap.io/v2/poi/?output=json&countrycode=NO&maxresults=*';
+    var url = 'https://api.openchargemap.io/v2/poi/?output=json&countrycode=NO&maxresults=200000';
     xhr.open('GET', url, true);
     xhr.onload = function() {
         xhr.Data = JSON.parse(this.response);
@@ -10,7 +10,7 @@ function initMap() {
                 lat: 60.391011,
                 lng: 5.325950
             },
-            zoom: 4
+            zoom: 14
         });
 
         if (this.status == 200) {

@@ -14,8 +14,6 @@ function initMap() {
         });
         if (this.status == 200) {
             xhr.Data.forEach(poi => {
-
-
                 var latLng = new google.maps.LatLng(poi.AddressInfo.Latitude, poi.AddressInfo.Longitude);
             //Creating a marker and putting it on the map
             var marker = new google.maps.Marker({

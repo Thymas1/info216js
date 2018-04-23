@@ -10,7 +10,7 @@ function initMap() {
                 lat: 60.391011,
                 lng: 5.325950
             },
-            zoom: 14
+            zoom: 6
         });
 
         if (this.status == 200) {
@@ -19,6 +19,7 @@ function initMap() {
 
                 var latLng = new google.maps.LatLng(poi.AddressInfo.Latitude, poi.AddressInfo.Longitude);
 
+
                 //console.log(poi);
 
                 //Creating a marker and putting it on the map
@@ -26,6 +27,13 @@ function initMap() {
                     position: latLng,
                     map: map,
 
+                });
+                // Creating an InfoWindow object
+                var infowindow = new google.maps.InfoWindow({
+                    content: ' <p style="color:blue;"> test hest prest </p>'
+                });
+                google.maps.event.addListener(marker, 'click', function() {
+                    infowindow.open(map, marker);
                 });
             })
         }

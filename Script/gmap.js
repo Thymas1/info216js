@@ -30,7 +30,7 @@ function initMap() {
                 });
                 // Creating an InfoWindow object
                 var infowindow = new google.maps.InfoWindow({
-                    content: ' <p style="color:blue;"> test hest prest </p>'
+                    content: 'Addresse:' + ' ' + poi.AddressInfo.AddressLine1
                 });
                 google.maps.event.addListener(marker, 'click', function() {
                     infowindow.open(map, marker);

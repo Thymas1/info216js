@@ -1,6 +1,6 @@
 function initMap() {
     var xhr = new XMLHttpRequest();
-    var url = 'https://api.openchargemap.io/v2/poi/?output=json&countrycode=NO&maxresults=100';
+    var url = 'https://api.openchargemap.io/v2/poi/?output=json&countrycode=NO&maxresults=200000';
     xhr.open('GET', url, true);
     xhr.onload = function () {
         xhr.Data = JSON.parse(this.response);
@@ -21,7 +21,7 @@ function initMap() {
                 map: map,
 
             });
-            // Creating an InfoWindow object
+
             var infowindow = new google.maps.InfoWindow({
                 content: '<a href="vislad.html?id=" + poi.ID> Addresse:</a>' + ' ' + poi.AddressInfo.AddressLine1 + '<br>' +
                 'Pris: ' + poi.UsageCost + '<br>'

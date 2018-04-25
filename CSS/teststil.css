@@ -33,3 +33,35 @@
 #myUL li a:hover:not(.header) {
     background-color: #eee; /* Add a hover effect to all links, except for headers */
 }
+
+#header{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 7.8%;
+    width: 100%;
+    background: #D47810;
+    text-align: center;
+
+}
+
+#header h1{
+    position: absolute;
+    color: ivory;
+    right:39rem;
+    bottom: -10px;
+
+}
+button{
+    z-index: 1;
+    position: absolute;
+    margin-top: 17px;
+    margin-left: -700px;
+}
+#queryForm{
+    margin-top: 65px;
+
+}

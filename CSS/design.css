@@ -118,3 +118,12 @@ ul {
 #linkSok{
     z-index: 1;
 }
+#sok{
+    position: absolute;
+    margin-left: 1090px;
+    margin-top: 10px;
+}
+#sok h4{
+    margin-bottom: -4px;
+
+}

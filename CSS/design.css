@@ -119,11 +119,11 @@ ul {
     z-index: 1;
 }
 #sok{
-    position: absolute;
+    position: fixed;
     margin-left: 1090px;
-    margin-top: 10px;
+
 }
 #sok h4{
-    margin-bottom: -4px;
+    margin-bottom: 4px;
 
 }

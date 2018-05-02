@@ -127,3 +127,12 @@ ul {
     margin-bottom: 4px;
 
 }
+#sokList {
+    height: 10%;
+    width: 10%;
+    position: absolute;
+    z-index: -1;
+    background-color: orange;
+    margin-top: 300px;
+    margin-left: 1000px;
+}

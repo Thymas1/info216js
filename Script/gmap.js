@@ -23,8 +23,9 @@ function initMap() {
             });
 
             var infowindow = new google.maps.InfoWindow({
-                content: '<a href="vislad.html?id=" + poi.ID> Addresse:</a>' + ' ' + poi.AddressInfo.AddressLine1 + '<br>' +
-                'Pris: ' + poi.UsageCost + '<br>'
+                content: 'Navn:' + ' ' + poi.AddressInfo.Title + '<br>' +
+                'Addresse: ' + ' ' + poi.AddressInfo.AddressLine1 + '<br>' + '<a href="vislad.html?id=" + poi.ID> Se mer informasjon</a>'
+                //OM vi ikke får til å lage spesifikke sider generert på bakgrunn av poi.ID legger vi bare inn all nødvendig informasjon her.
             });
             google.maps.event.addListener(marker, 'click', function () {
                 infowindow.open(map, marker);

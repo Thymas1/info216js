@@ -7,7 +7,10 @@ test.appendChild(cont);
 
 var knapp = document.getElementById("sokBtn");
 if (knapp){
-    knapp.addEventListener("click", sokfil);
+    knapp.addEventListener("click", asd);
+}
+function asd() {
+    alert("test");
 }
 
 function sokfil() {

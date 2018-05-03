@@ -40,11 +40,22 @@ function visAPI(){
                         var by = document.createElement("li");
                         by.textContent = "By:" + " " + poi.AddressInfo.Town;
 
+                        var fylke = document.createElement("li");
+                        fylke.textContent = "Fylke:" + " " + poi.AddressInfo.StateOrProvince;
+
                         var pris = document.createElement("li");
                         pris.textContent = "Pris for bruk:" + " " + poi.UsageCost;
 
+                        var erAktivt = document.createElement("li");
+                        erAktivt.textContent = "Er aktiv:" + " " + poi.SubmissionStatus.IsLive;
+
+                        var antallPunkt = document.createElement("li");
+                        antallPunkt.textContent = "Antall Punkter:" + " " + poi.NumberOfPoints;
+
+
                         var id = document.createElement("li");
                         id.textContent = "ID:" + " " + poi.ID;
+
 
 
                         konteiner.appendChild(kort);
@@ -54,7 +65,10 @@ function visAPI(){
                         form.appendChild(hoydegrader);
                         form.appendChild(breddegrader);
                         form.appendChild(by);
+                        form.appendChild(fylke)
                         form.appendChild(pris);
+                        form.appendChild(erAktivt);
+                        form.appendChild(antallPunkt);
                         form.appendChild(id);
                     }
 

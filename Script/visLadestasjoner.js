@@ -3,7 +3,11 @@ const app = document.getElementById('root');
 const container = document.createElement('div');
 container.setAttribute('class', 'container');
 
+var overskrift = document.createElement("h1");
+overskrift.textContent = "Alle ladestasjoner:"
+
 app.appendChild(container);
+container.appendChild(overskrift);
 
 var xhr = new XMLHttpRequest();
 xhr.open('GET','https://api.openchargemap.io/v2/poi/?output=json&countrycode=NO&maxresults=100', true);

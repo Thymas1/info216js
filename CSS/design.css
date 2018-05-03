@@ -129,10 +129,44 @@ ul {
 }
 #sokList {
     height: 10%;
-    width: 10%;
+    width: 30%;
     position: absolute;
-    z-index: -1;
-    background-color: orange;
-    margin-top: 300px;
-    margin-left: 1000px;
+    z-index: 1;
+
+    margin-top: 800px;
+    margin-left: 500px;
+}
+kort{
+
+    width: 45%;
+    height: 1,1%;
+    border-bottom: solid black;
+    border-right: solid black;
+    border-left: solid black;
+    margin-bottom: 10px;
+    margin-left: 200px;
+
+}
+
+.kort h1 {
+    text-align: center;
+    border-top: dashed  black;
+    border-bottom: dashed black;
+    margin: 0;
+    padding: 0;
+}
+.konteiner{
+    width: 100%;
+    text-align: center;
+    margin-top: 100px;
+}
+
+#sook {
+    position: absolute;
+    width: 10%;
+    z-index: 1;
+    margin-top: 900px;
+    margin-right: 500px;
+    background-color: blue;
+
 }

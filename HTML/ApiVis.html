@@ -9,6 +9,7 @@
         <script type="text/javascript" src="https://www.google.com/jsapi"></script>
         <script type="text/javascript" src="http://mgskjaeveland.github.io/sgvizler/v/0.6/sgvizler.js"></script>
         <script src="../Script/gmap.js"></script>
+    <script src="../Script/sok.js"></script>
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAA73boLc6CsxodBFionmXdWsYTY8I3WxY&callback=initMap"></script>
 
     <link rel="stylesheet" href="../CSS/design.css" type="text/css">
@@ -31,8 +32,11 @@
         </div>
         <div id="sok">
             <h4> Søk </h4>
+            <form id="form1">
             <input id="sokValue" value="" type="text" name="search" placeholder="Søk etter ladepunkt..">
-            <button id="sokBtn">Søk</button>
+            </form>
+            <button id="testknapp" onclick="userInput()">Søk</button>
+
 
             <br>
             <span class="fixSearchAlt">Gå til avansert søk:</span>
@@ -40,7 +44,10 @@
 
         </div>
         <div id="sokList">
-            <script src="../Script/sok.js"></script>
+            <form id="form2">
+            <input id="inputsok" type="text" name="sok" placeholder="Søk etter ladepunkt..">
+            </form>
+            <button onclick="visAPI()">vis</button>
         </div>
         <div id="resultat">
 
@@ -53,5 +60,7 @@
         </div>
     </div>
 </div>
-</body>
+
+
+    </body>
 </html>

@@ -75,7 +75,14 @@ function visAPI(){
 }
 
 function visPåKart() {
+
+
     function initMap() {
+
+        var input,navn;
+        input = document.getElementById("form2");
+        navn = input.elements["inputsok"].value;
+
         var xhr = new XMLHttpRequest();
         var url = 'https://api.openchargemap.io/v2/poi/?output=json&countrycode=NO&maxresults=50';
         xhr.open('GET', url, true);
@@ -117,8 +124,10 @@ function visPåKart() {
 
     initMap()
 
-
 }
+
+
+
 
 
 

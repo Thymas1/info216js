@@ -28,11 +28,12 @@
     <div id="dapper">
         <a href="søk.html" id="linkSok"> Søk i datasett:</a>
         <div id="mapstuff">
-            <div id="map" class="map">
-            </div>
+
             <script type="text/javascript">
                 visPåKart()('map');
             </script>
+            <div id="map" class="map">
+            </div>
         </div>
         <div id="sok">
             <h4> Søk </h4>
@@ -52,7 +53,7 @@
                 <h3>Søk etter ladepunkt</h3>
             <input id="inputsok" type="text" name="sok" placeholder="bruk kun små bokstaver">
             </form>
-            <button onclick="visAPI()">vis</button>
+            <button onclick="visAPI(), visPåKart()">vis</button>
         </div>
         <div id="resultat">
 

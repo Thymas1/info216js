@@ -18,7 +18,7 @@ function visAPI(){
         if (xhr.readyState === 4) {
             if (xhr.status === 200) {
                 xhr.data.forEach(poi => {
-                    if(navn == poi.AddressInfo.Title ) {
+                    if(navn == poi.AddressInfo.Title.toLowerCase() ) {
                         const kort = document.createElement('div');
                         kort.setAttribute('class', 'kort');
 
@@ -56,8 +56,6 @@ function visAPI(){
                         form.appendChild(by);
                         form.appendChild(pris);
                         form.appendChild(id);
-                    } else {
-                        console.log("virker ikke");
                     }
 
                 })
@@ -76,6 +74,51 @@ function visAPI(){
 
 }
 
+function visPåKart() {
+    function initMap() {
+        var xhr = new XMLHttpRequest();
+        var url = 'https://api.openchargemap.io/v2/poi/?output=json&countrycode=NO&maxresults=50';
+        xhr.open('GET', url, true);
+        xhr.onload = function () {
+            xhr.Data = JSON.parse(this.response);
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: {
+                    lat: 60.391011,
+                    lng: 5.325950
+                },
+                zoom: 6
+            });
+            if (this.status == 200) {
+                xhr.Data.forEach(poi => {
+                    if(navn == poi.AddressInfo.Title.toLowerCase() ) {
+                        var latLng = new google.maps.LatLng(poi.AddressInfo.Latitude, poi.AddressInfo.Longitude);
+                        //Creating a marker and putting it on the map
+                        var marker = new google.maps.Marker({
+                            position: latLng,
+                            map: map,
+
+                        });
+
+                        var infowindow = new google.maps.InfoWindow({
+                            content: 'Navn:' + ' ' + poi.AddressInfo.Title + '<br>' +
+                            'Addresse: ' + ' ' + poi.AddressInfo.AddressLine1 + '<br>' + '<a href="vislad.html?id=" + poi.ID> Se mer informasjon</a>'
+                            //OM vi ikke får til å lage spesifikke sider generert på bakgrunn av poi.ID legger vi bare inn all nødvendig informasjon her.
+                        });
+                        google.maps.event.addListener(marker, 'click', function () {
+                            infowindow.open(map, marker);
+                        });
+                    }
+                })
+            }
+        }
+        xhr.send();
+    }
+
+    initMap()
+
+
+}
 
 
 

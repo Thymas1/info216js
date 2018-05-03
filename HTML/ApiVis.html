@@ -8,7 +8,7 @@
         <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.js"></script>
         <script type="text/javascript" src="https://www.google.com/jsapi"></script>
         <script type="text/javascript" src="http://mgskjaeveland.github.io/sgvizler/v/0.6/sgvizler.js"></script>
-        <script src="../Script/gmap.js"></script>
+        <!--<script src="../Script/gmap.js"></script>-->
     <script src="../Script/sok.js"></script>
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAA73boLc6CsxodBFionmXdWsYTY8I3WxY&callback=initMap"></script>
 
@@ -27,8 +27,12 @@
 
     <div id="dapper">
         <a href="søk.html" id="linkSok"> Søk i datasett:</a>
-        <div id="mapstuff">z
-            <div id="map" class="map"></div>
+        <div id="mapstuff">
+            <div id="map" class="map">
+            </div>
+            <script type="text/javascript">
+                visPåKart()('map');
+            </script>
         </div>
         <div id="sok">
             <h4> Søk </h4>
@@ -45,7 +49,8 @@
         </div>
         <div id="sokList">
             <form id="form2">
-            <input id="inputsok" type="text" name="sok" placeholder="Søk etter ladepunkt..">
+                <h3>Søk etter ladepunkt</h3>
+            <input id="inputsok" type="text" name="sok" placeholder="bruk kun små bokstaver">
             </form>
             <button onclick="visAPI()">vis</button>
         </div>

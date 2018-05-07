@@ -103,12 +103,12 @@ function visPåKart() {
         xhr.onload = function () {
             xhr.Data = JSON.parse(this.response);
 
-            var map = new google.maps.Map(document.getElementById('map'), {
+            var map = new google.maps.Map(document.getElementById('kart'), {
                 center: {
                     lat: 60.391011,
                     lng: 5.325950
                 },
-                zoom: 6
+                zoom: 2
             });
             if (this.status == 200) {
                 xhr.Data.forEach(poi => {

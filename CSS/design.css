@@ -166,3 +166,16 @@ kort{
 #knapp{
     width: 35%;
 }
+#kart {
+ position: absolute;
+    margin-top: 10%;
+    margin-left: 80%;
+    display: flex;
+    background: ivory;
+    height: 15rem;
+    width: 20rem;
+    z-index: 1;
+
+    text-align: center;
+
+}

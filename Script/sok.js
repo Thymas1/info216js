@@ -70,6 +70,7 @@ function visAPI(){
                         form.appendChild(erAktivt);
                         form.appendChild(antallPunkt);
                         form.appendChild(id);
+
                     }
 
                 })

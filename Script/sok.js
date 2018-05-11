@@ -3,7 +3,7 @@ function visAPI(){
     const applikasjon = document.getElementById('sokList');
 
     const konteiner = document.createElement('div');
-    konteiner.setAttribute('class', 'konteiner');
+    konteiner.setAttribute('id', 'konteiner');
 
     applikasjon.appendChild(konteiner);
     var input,navn;
@@ -87,6 +87,15 @@ function visAPI(){
 
 
 
+}
+function slett() {
+    if( !$.trim( $('#konteiner').html() ).length ) {
+
+
+    } else {
+        var elem = document.getElementById("konteiner");
+    elem.parentNode.removeChild(elem);
+    }
 }
 
 function visPåKart() {

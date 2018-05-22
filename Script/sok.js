@@ -1,3 +1,6 @@
+// Denne funksjonen er søkefunksjonen som vi har på siden, den søker igjennom APIet og matcher søkestringen med navnet til ladestasjoner,
+// og viser informasjon om disse, informasjonen den viser er: Tittel, Addresse, Høyde og breddegrader, By, fylke, Pris, om det er aktivt, antall punkt
+// ID og Hvilke Hurtiglader som er støttet
 function visAPI() {
     const applikasjon = document.getElementById('sokList');
 
@@ -92,7 +95,7 @@ function visAPI() {
 
 
 }
-
+// Denne funksjonen sletter tidligere søkeresultater når et nytt søk blir gjennomført, så det passer på siden.
 function slett() {
     if (!$.trim($('#konteiner').html()).length) {
 
@@ -101,6 +104,7 @@ function slett() {
         elem.parentNode.removeChild(elem);
     }
 }
+// Denne funksjonen viser søkeresultatet på kartet, med informasjon i infowindow.
 
 function visPåKart() {
 
@@ -129,8 +133,7 @@ function visPåKart() {
                     if(navn == poi.AddressInfo.Title.toLowerCase()
             )
                 {
-                    var latLng = new google.maps.LatLng(poi.AddressInfo.Latitude, poi.AddressInfo.Longitude);
-                    //Creating a marker and putting it on the map
+                    var latLng = new google.maps.LatLng(poi.AddressInfo.Latitude, poi.AddressInfo.Longitude)
                     var marker = new google.maps.Marker({
                         position: latLng,
                         map: map,
@@ -139,8 +142,7 @@ function visPåKart() {
 
                     var infowindow = new google.maps.InfoWindow({
                         content: 'Navn:' + ' ' + poi.AddressInfo.Title + '<br>' +
-                        'Addresse: ' + ' ' + poi.AddressInfo.AddressLine1 + '<br>' + '<a href="vislad.html?id=" + poi.ID> Se mer informasjon</a>'
-                        //OM vi ikke får til å lage spesifikke sider generert på bakgrunn av poi.ID legger vi bare inn all nødvendig informasjon her.
+                        'Addresse: ' + ' ' + poi.AddressInfo.AddressLine1
                     });
                     google.maps.event.addListener(marker, 'click', function () {
                         infowindow.open(map, marker);

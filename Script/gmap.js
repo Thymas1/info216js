@@ -22,7 +22,7 @@ function initMap() {
                 map: map,
 
             });
-            //Lager et infovindu til marker som kommer opp når det klikkes på.
+            //Lager et infovindu til marker som kommer opp når det klikkes på
             var infowindow = new google.maps.InfoWindow({
                 content: 'Navn:' + ' ' + poi.AddressInfo.Title + '<br>' +
                 'Addresse: ' + ' ' + poi.AddressInfo.AddressLine1 + '<br>' + poi.ID> Se mer informasjon</a>'

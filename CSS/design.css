@@ -1,12 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Gugi');
 
 body {
-    display: flex;
     font-family: 'Gugi', cursive;
 }
 
 #wrapper {
-    display: flex;
     flex-direction: column;
     height: 100%;
     width: 100%;
@@ -14,7 +12,6 @@ body {
 }
 
 #header {
-    display: flex;
     align-content: center;
     justify-content: center;
     position: absolute;
@@ -172,6 +169,16 @@ kort {
     width: 25rem;
     z-index: 1;
     text-align: center;
+
+}
+#go2car{
+    position: relative;
+    background: #D47810;
+    z-index: 1;
+    padding-top: 100px;
+    padding-left: 10px;
+    left: -10px;
+    height: 600px;
 
 }
 

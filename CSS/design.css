@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Gugi');
 
-body{
+body {
     display: flex;
     font-family: 'Gugi', cursive;
 }
 
-#wrapper{
+#wrapper {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -13,7 +13,7 @@ body{
 
 }
 
-#header{
+#header {
     display: flex;
     align-content: center;
     justify-content: center;
@@ -27,20 +27,18 @@ body{
 
 }
 
-#header h1{
+#header h1 {
     position: absolute;
     color: ivory;
-    right:39rem;
+    right: 39rem;
     bottom: -10px;
 
 }
 
-
-
-.card{
+.card {
 
     width: 45%;
-    height: 1,1%;
+    height: 1, 1%;
     border-bottom: solid black;
     border-right: solid black;
     border-left: solid black;
@@ -51,16 +49,14 @@ body{
 
 .card h1 {
     text-align: center;
-    border-top: dashed  black;
+    border-top: dashed black;
     border-bottom: dashed black;
     margin: 0;
     padding: 0;
 }
 
-
 #root h1 {
     display: flex;
-
 
 }
 
@@ -70,35 +66,31 @@ body{
     align-content: space-between;
 }
 
-
-#root{
+#root {
     margin-top: 700px;
     width: 100%;
     text-align: center;
 
 }
 
-.container{
+.container {
     width: 100%;
     text-align: center;
     margin-top: 100px;
 }
 
-
-
-
-li{
+li {
     list-style-type: none;
     margin-bottom: 2px;
 
-
 }
+
 ul {
     text-align: left;
 
-
 }
-#map{
+
+#map {
     top: 0.2%;
     display: flex;
     background: ivory;
@@ -108,47 +100,51 @@ ul {
     float: right;
     text-align: center;
 
-
 }
-#linkSok{
+
+#linkSok {
     z-index: 1;
 }
-#sok{
+
+#sok {
     position: fixed;
     margin-left: 1090px;
 
 }
-#sok h4{
+
+#sok h4 {
     margin-bottom: 4px;
 
 }
+
 #sokList {
     height: 10%;
     width: 30%;
     position: absolute;
     z-index: 1;
-   margin-left: 70em;
+    margin-left: 70em;
 }
-kort{
+
+kort {
 
     width: 30%;
-    height: 1,1%;
+    height: 1, 1%;
     border-bottom: solid black;
     border-right: solid black;
     border-left: solid black;
     margin-bottom: 10px;
 
-
 }
 
 .kort h1 {
     text-align: center;
-    border-top: dashed  black;
+    border-top: dashed black;
     border-bottom: dashed black;
     margin: 0;
     padding: 0;
 }
-#konteiner{
+
+#konteiner {
     width: 50%;
     text-align: center;
     margin-top: 300px;
@@ -161,19 +157,21 @@ kort{
     margin-top: 10%;
     margin-right: 400px;
 }
-#knapp{
+
+#knapp {
     width: 35%;
 }
-#kart {
-     position: absolute;
-     margin-top: 10%;
-     margin-left: 68%;
-     display: flex;
-     background: white;
-     height: 18rem;
-     width: 25rem;
-     z-index: 1;
-     text-align: center;
 
- }
+#kart {
+    position: absolute;
+    margin-top: 10%;
+    margin-left: 68%;
+    display: flex;
+    background: white;
+    height: 18rem;
+    width: 25rem;
+    z-index: 1;
+    text-align: center;
+
+}
 

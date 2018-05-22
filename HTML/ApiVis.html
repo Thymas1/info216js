@@ -5,12 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.js"></script>
-        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-        <script type="text/javascript" src="http://mgskjaeveland.github.io/sgvizler/v/0.6/sgvizler.js"></script>
-        <script src="../Script/gmap.js"></script>
-        <script src="../Script/sok.js"></script>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAA73boLc6CsxodBFionmXdWsYTY8I3WxY&callback=initMap"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="http://mgskjaeveland.github.io/sgvizler/v/0.6/sgvizler.js"></script>
+    <script src="../Script/gmap.js"></script>
+    <script src="../Script/sok.js"></script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAA73boLc6CsxodBFionmXdWsYTY8I3WxY&callback=initMap"></script>
 
     <link rel="stylesheet" href="../CSS/design.css" type="text/css">
     <title>Ladestasjoner i Norge</title>
@@ -29,9 +30,9 @@
         <a href="søk.html" id="linkSok"> Søk i datasett:</a>
         <div id="mapstuff">
 
-           <!-- <script type="text/javascript">
-                visPåKart()('map');
-            </script>-->
+            <!-- <script type="text/javascript">
+                 visPåKart()('map');
+             </script>-->
             <div id="map" class="map">
             </div>
         </div>
@@ -44,24 +45,26 @@
         <div id="sokList">
             <form id="form2">
                 <h3>Søk etter ladepunkt</h3>
-            <input id="inputsok" type="text" name="sok" placeholder="bruk kun små bokstaver">
+                <input id="inputsok" type="text" name="sok" placeholder="bruk kun små bokstaver">
             </form>
             <button id="knapp" onclick="slett(),visAPI(), visPåKart()">vis</button>
             <br>
             <span class="fixSearchAlt">Gå til avansert søk:</span>
-            <a href="http://127.0.0.1/quick-start.html"> <button>Avansert søk</button> </a>
+            <a href="http://127.0.0.1/quick-start.html">
+                <button>Avansert søk</button>
+            </a>
         </div>
 
-            <div id="root">
-                <script src="../Script/visLadestasjoner.js"></script>
-            </div>
+        <div id="root">
+            <script src="../Script/visLadestasjoner.js"></script>
+        </div>
 
     </div>
 </div>
 
 <div id="test">
-<p> hest</p>
+    <p> hest</p>
 </div>
 
-    </body>
+</body>
 </html>

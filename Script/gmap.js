@@ -1,7 +1,7 @@
 
 function initMap() {
     var xhr = new XMLHttpRequest();
-    var url = 'https://api.openchargemap.io/v2/poi/?output=json&countrycode=NO&maxresults=50';
+    var url = 'https://api.openchargemap.io/v2/poi/?output=json&countrycode=NO&maxresults=100';
     xhr.open('GET', url, true);
     xhr.onload = function () {
         xhr.Data = JSON.parse(this.response);

@@ -56,6 +56,9 @@ function visAPI(){
                         var id = document.createElement("li");
                         id.textContent = "ID:" + " " + poi.ID;
 
+                        var Ladertype = document.createElement("li");
+                        id.textContent = "Ladertype:" + " " + poi.Connections[0].ConnectionType.FormalName;
+
 
 
                         konteiner.appendChild(kort);
@@ -70,6 +73,8 @@ function visAPI(){
                         form.appendChild(erAktivt);
                         form.appendChild(antallPunkt);
                         form.appendChild(id);
+                        form.appendChild(Ladertype);
+
 
                     }
 
@@ -91,7 +96,6 @@ function visAPI(){
 function slett() {
     if( !$.trim( $('#konteiner').html() ).length ) {
 
-
     } else {
         var elem = document.getElementById("konteiner");
     elem.parentNode.removeChild(elem);
@@ -108,7 +112,7 @@ function visPåKart() {
         navn = input.elements["inputsok"].value;
 
         var xhr = new XMLHttpRequest();
-        var url = 'https://api.openchargemap.io/v2/poi/?output=json&countrycode=NO&maxresults=50';
+        var url = 'https://api.openchargemap.io/v2/poi/?output=json&countrycode=NO&maxresults=100';
         xhr.open('GET', url, true);
         xhr.onload = function () {
             xhr.Data = JSON.parse(this.response);
@@ -149,6 +153,7 @@ function visPåKart() {
     initMap()
 
 }
+
 
 
 
